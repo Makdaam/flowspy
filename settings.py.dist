@@ -177,6 +177,7 @@ AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 NETCONF_DEVICE = ""
 NETCONF_USER = ""
 NETCONF_PASS = ""
+NETCONF_PORT = 830
 ROUTES_FILTER = "<configuration><routing-options><flow/></routing-options></configuration>"
 ROUTE_FILTER = "<configuration><routing-options><flow><route><name>%s</name></route></flow></routing-options></configuration>"
 COMMIT_CONFIRMED_TIMEOUT = "120"
