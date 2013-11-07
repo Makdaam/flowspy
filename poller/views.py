@@ -108,6 +108,10 @@ class Msgs(object):
             self.user_cursor[user] = self.user_cache[user][-2]['id']
         if len(self.user_cache[user]) > self.cache_size:
             self.user_cache[user] = self.user_cache[user][-self.cache_size:]
+        try:
+            assert(self.new_message_user_event[user])
+        except:
+            self.new_message_user_event[user] = Event()
         self.new_message_user_event[user].set()
         self.new_message_user_event[user].clear()
         return json_response(msg)
